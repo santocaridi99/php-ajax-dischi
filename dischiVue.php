@@ -20,16 +20,25 @@
         <header></header>
         <main>
             <!-- stessa cosa di dischi.php -->
-            <!-- stampo i dischi solamente con php -->
-            <!-- nel container passerò con inlcude cartella Cardbox presente nel template -->
+            <!-- avroò una card (v-for) per ogni disco presente nell'array dischi -->
+            <!-- che avrà img e text area passati dinamicamente  -->
             <div class="main-container">
-                <?php include __DIR__ . "/template/CardBox.php" ?>
+                <div v-for="disc in discs" class="card">
+                    <img :src="disc.poster" :alt="disc.title">
+                    <div class="textbox">
+                        <h2>{{disc.title}}</h2>
+                        <div class="author-year">
+                            <h3>{{disc.author}}</h3>
+                            <h4>{{disc.year}}</h4>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
         <footer></footer>
     </div>
     <!-- importo lo script -->
-    <script src="./js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
