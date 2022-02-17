@@ -22,12 +22,22 @@
                 <img src="./img/logo.svg" alt="spotify">
             </div>
         </header>
+        <div class="filter">
+            <select v-model="selectedGenre" @change="genreFilter">
+                <option value="">All</option>
+                <option value="Jazz">Jazz</option>
+                <option value="Metal">Metal</option>
+                <option value="Pop">Pop</option>
+                <option value="Rock">Rock</option>
+            </select>
+
+        </div>
         <main>
             <!-- stessa cosa di dischi.php -->
             <!-- avroò una card (v-for) per ogni disco presente nell'array dischi -->
             <!-- che avrà img e text area passati dinamicamente  -->
             <div class="main-container">
-                <div v-for="disc in discs" class="card">
+                <div v-for="disc in filteredDisc" class="card">
                     <img :src="disc.poster" :alt="disc.title">
                     <div class="textbox">
                         <h2>{{disc.title}}</h2>

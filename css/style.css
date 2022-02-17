@@ -60,3 +60,19 @@ header{
 .author-year{
     color: gray;
 }
+/* filter */
+.filter{
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  height: 60px;
+  justify-content: flex-end;
+  align-items: center;
+}
+select{
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #2e3a46;
+    color: white;
+    border-color: greenyellow;
+}
