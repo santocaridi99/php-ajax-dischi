@@ -10,7 +10,11 @@
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <div class="logo">
+            <img src="./img/logo.svg" alt="spotify">
+        </div>
+    </header>
     <main>
         <!-- stampo i dischi solamente con php -->
         <!-- nel container passerò con inlcude cartella Cardbox presente nel template -->
@@ -18,7 +22,6 @@
             <?php include __DIR__ . "/template/CardBox.php" ?>
         </div>
     </main>
-    <footer></footer>
 </body>
 
 </html>
